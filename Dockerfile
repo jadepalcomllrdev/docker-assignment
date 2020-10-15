@@ -1,9 +1,10 @@
 #STAGE 1 production build
 FROM node:12-alpine AS build
+RUN mkdir -p /app
 WORKDIR /app
-COPY package.json ./
-RUN npm i
-COPY ./ ./
+COPY package*.json ./
+RUN npm install
+COPY ./ /app
 RUN npm run build --prod
 
 #STAGE 2

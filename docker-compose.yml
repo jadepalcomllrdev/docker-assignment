@@ -1,6 +1,6 @@
 version: "3"
 services:
-  dockerino:
+  web:
     build:
       context: .
       dockerfile: Dockerfile
