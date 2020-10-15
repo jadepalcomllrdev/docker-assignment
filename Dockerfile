@@ -8,6 +8,6 @@ RUN npm run build --prod
 
 #STAGE 2
 FROM nginx:1.19.2-alpine as prod-stage
-COPY --from=build /app/dist/myApp /usr/share/nginx/html
+COPY --from=build /app/dist/docker-assignment /usr/share/nginx/html
 EXPOSE 4200
 CMD ["nginx", "-g", "daemon off;"]
