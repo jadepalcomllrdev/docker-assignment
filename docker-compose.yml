@@ -1,0 +1,13 @@
+version: "3"
+services:
+  dockerino:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    tty: true
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modues
+    ports:
+      - "4200:4200"
