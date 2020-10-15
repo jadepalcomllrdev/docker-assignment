@@ -8,6 +8,6 @@ services:
     tty: true
     volumes:
       - .:/usr/src/app
-      - /usr/src/app/node_modues
+      - /usr/src/app/node_modules
     ports:
       - "4200:4200"
